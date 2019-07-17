@@ -1,13 +1,10 @@
 var express	= require('express');
 var router	= express.Router();
 
-router.get('/', function (req, res) {
-	res.send('Helo');
-});
+var api = require('../controller/ApiController');
 
-router.get('/all', function (req, res) {
-	res.send('all request');
-});
+router.get('/', api.index);
+router.get('/all', api.all);
 
 module.exports = router;
 

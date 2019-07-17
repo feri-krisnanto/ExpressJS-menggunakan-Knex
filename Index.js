@@ -14,6 +14,10 @@ server.use(logger('dev'));
 server.use('/', indexRouter);
 server.use('/api', apiRouter);
 
+server.use('*', function (req, res) {
+	res.send('error 404');	
+})
+
 //add public file
 server.use(express.static(__dirname + '/public'));
 
