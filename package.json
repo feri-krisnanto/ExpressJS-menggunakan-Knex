@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "dev": "PORT=4000 NODE_ENV=development nodemon index.js",
+    "start": "PORT=3000 NODE_ENV=production node index.js"
   },
   "author": "Feri Krisnanto",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "knex": "^0.19.0",
     "morgan": "^1.9.1",
+    "mysql": "^2.17.1",
     "nodemon": "^1.19.1"
   }
 }
